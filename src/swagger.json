@@ -1,0 +1,163 @@
+{
+
+    "openapi": "3.0.0",
+    "info": {
+        "title":  "Desafio Swagger",
+        "description": "Aqui irei documentar os pedidos do Desafio",
+        "versioin": "1.0.0",
+        "contact": {
+            "email": "luizfernando-dev@outlook.com"
+                  }
+            },
+
+    "paths": {
+        "/users": {
+            "post": {
+                "tags": ["Users"],
+                "summary": "Criar um novo usuário",
+                "description": "Create a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "name": "Novo Usuário",
+                                "email": "Email do usuário"
+                            }
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "Criado"
+                },
+                "500": {
+                    "description": "Usuário ja existe!"
+                }
+            }
+        },
+
+        "users": {
+            "get": {
+                "tags": ["Users"],
+                "summary": "Criar um novo usuário",
+                "description": "Create a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "name": "Novo Usuário",
+                                "email": "Email do usuário"
+                            }
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "Criado"
+                },
+                "500": {
+                    "description": "Usuário ja existe!"
+                }
+            }
+        },
+
+        "users/{user_id}": {
+            "get": {
+                "tags": ["Users"],
+                "summary": "Criar um novo usuário",
+                "description": "Create a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "name": "Novo Usuário",
+                                "email": "Email do usuário"
+                            }
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "Criado"
+                },
+                "500": {
+                    "description": "Usuário ja existe!"
+                }
+            }
+        },
+
+        "users/{user_id}/admin": {
+            "patch": {
+                "tags": ["Users"],
+                "summary": "Criar um novo usuário",
+                "description": "Create a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "name": "Novo Usuário",
+                                "email": "Email do usuário"
+                            }
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "201": {
+                    "description": "Criado"
+                },
+                "500": {
+                    "description": "Usuário ja existe!"
+                }
+            }
+        }
+    }
+}
+
